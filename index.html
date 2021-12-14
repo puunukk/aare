@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aare</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./materialize.min.css" rel="stylesheet">
+    <link href="./default.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="/" class="brand-logo">
+                <img src="chest.png" width="100" height="100" alt="logo" >
+            </a>
+            <ul id="nav-mobile" class="right">
+                <li><a href="#">{player_count}</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1 class="center-align">
+            GAM.EE</h1>
+
+        <div class="row center">
+            <button type="button" onclick="startGame();" class="btn waves-effect waves-light">
+                Start game
+                <i class="material-icons right">send</i>
+            </button>
+        </div>
+
+        
+        <div class="row hidden">
+            
+            <div class="progress">
+                <div class="determinate" id="progress_bar"></div>
+            </div>
+
+            <p class="col s12" id="question">questiooona</p>
+            
+            <div class="input-field col s10">
+                <textarea id="answer" class="materialize-textarea"></textarea>
+                <label for="textarea1">your answer</label>
+            </div>
+
+            <div class="input-field col s2">
+                <button
+                    type="button"
+                    class="btn waves-effect waves-light"
+                    onclick="handleNextQuestion();"
+                >
+                    answerrr rsk
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
+
+        <canvas id="aare" class="hidden"></canvas>
+        <!--             
+        <div class="row hidden">
+            <div class="col s10 push-s1">
+                <canvas id="aare" width="100%" height="100%"></canvas>
+            </div>
+        </div>
+        -->
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row center">
+                © 2021 Liis
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./jquery-3.6.0.min.js"></script>
+    <script src="./materialize.min.js"></script>
+    <script src="./helpers.js"></script>
+    <script src="./aare.js"></script>
+</body>
+
+</html>
