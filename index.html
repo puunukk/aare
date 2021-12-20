@@ -25,36 +25,40 @@
         </div>
     </nav>
 
+    
     <main class="container">
-        <h1 class="center-align">
-            GAM.EE</h1>
-
-        <div class="row center">
-            <button type="button" onclick="startGame();" class="btn waves-effect waves-light">
+        <div class="row hidden min20">
+            <div class="progress sticy">
+                <div class="determinate" id="progress_bar"></div>
+            </div>
+            <div id="canvasWrap" class="min100">
+                <canvas id="aare" width="100%" height="100%"></canvas>
+            </div>
+        </div>
+        
+        <div class="row center hide-after-start">
+            <h1 class="center-align">GAM.EE</h1>
+            <button type="button" id="startBtn" onclick="startGame();" class="btn waves-effect waves-light">
                 Start game
                 <i class="material-icons right">send</i>
             </button>
         </div>
-
+        
         
         <div class="row hidden">
-            
-            <div class="progress">
-                <div class="determinate" id="progress_bar"></div>
-            </div>
-
-            <p class="col s12" id="question">questiooona</p>
             
             <div class="input-field col s10">
                 <textarea id="answer" class="materialize-textarea"></textarea>
                 <label for="textarea1">your answer</label>
+                <span id="question" class="helper-text" data-error="wrong" data-success="right">
+                    Helper text</span>
             </div>
-
+            
             <div class="input-field col s2">
                 <button
-                    type="button"
-                    class="btn waves-effect waves-light"
-                    onclick="handleNextQuestion();"
+                type="button"
+                class="btn waves-effect waves-light"
+                onclick="handleNextQuestion();"
                 >
                     answerrr rsk
                     <i class="material-icons right">send</i>
@@ -62,16 +66,20 @@
             </div>
         </div>
 
-        <canvas id="aare" class="hidden"></canvas>
-        <!--             
-        <div class="row hidden">
-            <div class="col s10 push-s1">
-                <canvas id="aare" width="100%" height="100%"></canvas>
-            </div>
+        <div class="row center fin">
+            
+            <h1 class="center-align">FINNISH FUCK FACE</h1>
+            <button type="button" id="restart_game" class="btn waves-effect waves-light">
+                Restart game
+                <i class="material-icons right">send</i>
+            </button>
         </div>
+        
+        <!--             
+            <canvas id="aare" class="hidden"></canvas>
         -->
     </main>
-
+    
     <footer class="page-footer">
         <div class="container">
             <div class="row center">
@@ -84,7 +92,9 @@
     <script src="./jquery-3.6.0.min.js"></script>
     <script src="./materialize.min.js"></script>
     <script src="./helpers.js"></script>
-    <script src="./aare.js"></script>
+    <!-- <script src="./aare.js"></script> -->
+    <!-- <script src="./grid.js"></script> -->
+    <!-- <script src="./kaksPilt.js"></script> -->
 </body>
 
 </html>
